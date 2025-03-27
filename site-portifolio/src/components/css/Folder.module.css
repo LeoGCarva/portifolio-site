@@ -1,0 +1,51 @@
+.folder {
+  .folderName {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+
+    background: none;
+    border: none;
+    color: var(--white-50);
+
+    padding: 0.2rem 1rem;
+
+    .arrowFolder1 {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .folderName:hover {
+    background-color: var(--white-10);
+  }
+
+  .checkboxFolder1 {
+    position: relative;
+    background: none;
+    width: 1px;
+    height: 1px;
+    display: none;
+  }
+
+  .content {
+    display: none;
+    padding: .4rem 2.5rem;
+
+    .fileName {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+
+    .fileName:hover {
+      cursor: pointer;
+      color: var(--white-75);
+    }
+  }
+
+  .checkboxFolder1:checked ~ .content {
+    display: block;
+  }
+}
