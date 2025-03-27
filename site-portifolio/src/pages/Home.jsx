@@ -16,12 +16,18 @@ import {
   VscCopilot,
   VscAccount,
   VscGear,
+  VscRemote,
+  VscWarning,
+  VscBroadcast,
+  VscBell,
 } from "react-icons/vsc";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { BsThreeDots } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { LuCircleX } from "react-icons/lu";
 
 import style from "./css/Home.module.css";
+import { Folder } from "../components/Folder";
 
 export function Home() {
   return (
@@ -45,7 +51,7 @@ export function Home() {
             <VscArrowRight />
             <span>
               <VscSearch />
-              <p>site-portifolio</p>
+              <p>site-portfolio</p>
             </span>
             <VscCopilot />
           </span>
@@ -63,13 +69,16 @@ export function Home() {
 
         <aside className={style.explorerArea}>
           <div className={style.iconsNavbar}>
-            <span>
-              <VscFiles className={style.firstIcon} />
-            </span>
-            <VscSearch className={style.icons} />
-            <VscSourceControl className={style.icons} />
-            <VscDebugAlt className={style.icons} />
-            <VscExtensions className={style.icons} />
+            <div className={style.topIcons}>
+              <span>
+                <VscFiles className={style.firstIcon} />
+              </span>
+              <VscSearch className={style.icons} />
+              <VscSourceControl className={style.icons} />
+              <VscDebugAlt className={style.icons} />
+              <VscExtensions className={style.icons} />
+            </div>
+
             <div className={style.bottomIcons}>
               <a href="https://github.com/LeoGCarva">
                 <VscAccount className={style.icons} />
@@ -83,27 +92,70 @@ export function Home() {
                 <p>EXPLORER</p> <BsThreeDots />
               </span>
               <span className={style.dirTitle}>
-                <IoIosArrowDown color="white" />
-                <p>SITE-PORTIFOLIO</p>
+                <IoIosArrowDown color="rgba(255, 255, 255, 0.75)" />
+                <p>SITE-PORTFOLIO</p>
               </span>
-              <p>site-portifolio</p>
+
+              <Folder name={"Projects"} />
             </div>
             <div>
               <span className={style.dirTitle}>
-                <IoIosArrowForward color="white" />
+                <IoIosArrowForward color="rgba(255, 255, 255, 0.75)" />
                 <p>OUTLINE</p>
               </span>
               <span className={style.dirTitle}>
-                <IoIosArrowForward color="white" />
+                <IoIosArrowForward color="rgba(255, 255, 255, 0.75)" />
                 <p>TIMELINE</p>
               </span>
             </div>
           </div>
         </aside>
 
-        <main className={style.ideArea}>teste</main>
+        <main className={style.ideArea}>
+          <div className={style.ideContent}>
+            <BiLogoVisualStudio size={400} className={style.vscLogo} />
+            <p>Welcome to my portfolio!</p>
+            <div className={style.textArea}>
+              <div className={style.teste}>
+                <p>Name</p>
+                <p>Profession</p>
+                <p>Email</p>
+                <p>Passions</p>
+              </div>
+              <div className={style.teste2}>
+                <p>
+                  <code>Leonardo</code>
+                </p>
+                <p>
+                  <code>DEV</code> + <code>Front-End</code>
+                </p>
+                <p>
+                  <code>leu1.g.carvalho@gmail.com</code>
+                </p>
+                <p>
+                  <code>code</code> + <code>hobbits</code> + <code>chess</code>
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
 
-        <footer className={style.footer}>conteudo do footer</footer>
+        <footer className={style.footer}>
+          <div className={style.footerLeft}>
+            <VscRemote className={style.icons} />
+            <span>
+              <LuCircleX /> <p>0</p>
+              <VscWarning /> <p>0</p>
+            </span>
+          </div>
+          <div className={style.footerRight}>
+            <VscCopilot className={style.icons} />
+            <span>
+              <VscBroadcast /> <p>Go Live</p>
+            </span>
+            <VscBell className={style.icons} />
+          </div>
+        </footer>
       </div>
     </>
   );
