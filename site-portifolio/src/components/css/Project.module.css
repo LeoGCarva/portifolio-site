@@ -1,0 +1,10 @@
+.fileName {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.fileName:hover {
+  cursor: pointer;
+  color: var(--white-75);
+}
