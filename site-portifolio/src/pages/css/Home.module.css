@@ -173,52 +173,49 @@
       }
     }
   }
+
+  .folder {
+    .folderName {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      width: 100%;
+
+      background: none;
+      border: none;
+      color: var(--white-50);
+
+      padding: 0.2rem 1rem;
+
+      .arrowFolder1 {
+        transform: rotate(-90deg);
+      }
+    }
+
+    .folderName:hover {
+      background-color: var(--white-10);
+    }
+
+    .checkboxFolder1 {
+      position: relative;
+      background: none;
+      width: 1px;
+      height: 1px;
+      display: none;
+    }
+
+    .content {
+      display: none;
+      padding: .4rem 2.5rem;
+    }
+
+    .checkboxFolder1:checked ~ .content {
+      display: block;
+    }
+  }
 }
 
 .ideArea {
   grid-area: main;
-
-  .ideContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    height: 90%;
-
-    color: var(--white-25);
-
-    .textArea {
-      padding: 1rem;
-      display: flex;
-
-      gap: .5rem;
-    }
-
-    .teste {
-      align-items: end;
-      width: 12.5rem;
-    }
-    .teste2 {
-      width: 15rem;
-    }
-
-    .teste, .teste2 {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    code {
-      padding: .2rem .5rem;
-      border-radius: 5px;
-      border-bottom: 1px solid var(--white-25);
-      color: var(--white-50);
-      background-color: var(--white-10);
-    }
-
-    .vscLogo {
-      color: var(--second-background-color);
-    }
-  }
 }

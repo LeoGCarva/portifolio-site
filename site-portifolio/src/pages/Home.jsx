@@ -24,12 +24,16 @@ import {
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { BsThreeDots } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-import { LuCircleX } from "react-icons/lu";
+import { LuCircleX, LuFolder } from "react-icons/lu";
+import { WelcomePage } from "./WelcomePage";
+import { Project } from "../components/Project";
+import { useState } from "react";
 
 import style from "./css/Home.module.css";
-import { Folder } from "../components/Folder";
 
 export function Home() {
+  const [pageCount, setPageCount] = useState();
+
   return (
     <>
       <div className={style.pageContainer}>
@@ -96,7 +100,27 @@ export function Home() {
                 <p>SITE-PORTFOLIO</p>
               </span>
 
-              <Folder name={"Projects"} />
+              <div className={style.folder}>
+                <input
+                  type="checkbox"
+                  id="checkboxFolder1"
+                  className={style.checkboxFolder1}
+                />
+                <label htmlFor="checkboxFolder1" className={style.folderName}>
+                  <IoIosArrowDown
+                    className={style.arrowFolder1}
+                    color="rgba(255, 255, 255, 0.75)"
+                  />
+                  <LuFolder size={13} color="rgba(255, 255, 255, 0.75)" />
+                  <p>Teste</p>
+                </label>
+                <div className={style.content} onClick={() => setPageCount(<WelcomePage />)}>
+                  <Project projectName={"project-yakult.json"} />
+                </div>
+                <div className={style.content} onClick={() => setPageCount(<><div>oi</div></>)}>
+                  <Project projectName={"project-yakult.json"} />
+                </div>
+              </div>
             </div>
             <div>
               <span className={style.dirTitle}>
@@ -111,34 +135,7 @@ export function Home() {
           </div>
         </aside>
 
-        <main className={style.ideArea}>
-          <div className={style.ideContent}>
-            <BiLogoVisualStudio size={400} className={style.vscLogo} />
-            <p>Welcome to my portfolio!</p>
-            <div className={style.textArea}>
-              <div className={style.teste}>
-                <p>Name</p>
-                <p>Profession</p>
-                <p>Email</p>
-                <p>Passions</p>
-              </div>
-              <div className={style.teste2}>
-                <p>
-                  <code>Leonardo</code>
-                </p>
-                <p>
-                  <code>DEV</code> + <code>Front-End</code>
-                </p>
-                <p>
-                  <code>leu1.g.carvalho@gmail.com</code>
-                </p>
-                <p>
-                  <code>code</code> + <code>hobbits</code> + <code>chess</code>
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
+        <main className={style.ideArea}>{pageCount === undefined ? <WelcomePage /> : pageCount}</main>
 
         <footer className={style.footer}>
           <div className={style.footerLeft}>
