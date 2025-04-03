@@ -12,6 +12,7 @@ export function WelcomePage() {
             <p>Name</p>
             <p>Profession</p>
             <p>Email</p>
+            <p>Github</p>
             <p>Passions</p>
           </div>
           <div className={style.teste2}>
@@ -23,6 +24,9 @@ export function WelcomePage() {
             </p>
             <p>
               <code>leu1.g.carvalho@gmail.com</code>
+            </p>
+            <p>
+              <code>github.com/LeoGCarva</code>
             </p>
             <p>
               <code>code</code> + <code>hobbits</code> + <code>chess</code>

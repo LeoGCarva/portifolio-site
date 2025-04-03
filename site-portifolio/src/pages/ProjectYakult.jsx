@@ -1,4 +1,6 @@
 import { codeToHtml } from "shiki";
+import { Header } from "../components/Header";
+
 import style from "./css/ProjectYakult.module.css";
 
 const demoCode = `{
@@ -25,6 +27,7 @@ const html = await codeToHtml(demoCode, {
 export function ProjectYakult() {
   return (
     <>
+      <Header name={'project.yakult.json'}/>
       <div className={style.projectContainer}>
         <div className={style.lineCount}>
           <p>1</p>
@@ -45,7 +48,7 @@ export function ProjectYakult() {
           <p>16</p>
         </div>
         <div
-          className={style.teste}
+          className={style.contentDiv}
           dangerouslySetInnerHTML={{ __html: html }}
         ></div>
       </div>
