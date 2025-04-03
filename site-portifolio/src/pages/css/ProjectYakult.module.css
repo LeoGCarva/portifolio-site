@@ -1,0 +1,20 @@
+.projectContainer {
+  display: flex;
+}
+
+.lineCount {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+  p {
+    padding: 0 1rem 0 2rem;
+    display: flex;
+    justify-content: end;
+    color: var(--white-25);
+  }
+}
+
+.teste {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
