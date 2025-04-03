@@ -1,0 +1,29 @@
+.mainAreaHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--second-background-color);
+
+  .contentHeader {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .5rem 1rem;
+    font-size: .8rem;
+
+    background-color: var(--background-color);
+    color: var(--white-50);
+
+    .closeBtn:hover {
+      cursor: pointer;
+      color: var(--white-75);
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: .5rem;
+    color: var(--white-50);
+  }
+}
