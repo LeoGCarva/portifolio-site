@@ -30,6 +30,7 @@ import { Project } from "../components/Project";
 import { useState } from "react";
 
 import style from "./css/Home.module.css";
+import { ProjectYakult } from "./ProjectYakult";
 
 export function Home() {
   const [pageCount, setPageCount] = useState();
@@ -112,12 +113,9 @@ export function Home() {
                     color="rgba(255, 255, 255, 0.75)"
                   />
                   <LuFolder size={13} color="rgba(255, 255, 255, 0.75)" />
-                  <p>Teste</p>
+                  <p>Projects</p>
                 </label>
-                <div className={style.content} onClick={() => setPageCount(<WelcomePage />)}>
-                  <Project projectName={"project-yakult.json"} />
-                </div>
-                <div className={style.content} onClick={() => setPageCount(<><div>oi</div></>)}>
+                <div className={style.content} onClick={() => setPageCount(<ProjectYakult />)}>
                   <Project projectName={"project-yakult.json"} />
                 </div>
               </div>
