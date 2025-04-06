@@ -8,9 +8,10 @@ const demoCode = `{
   "version": "0.0.1",
 
   "description": {
-    "summary": "This is a website that simulates a sell and buy of a distributor, ]in this case, Yakult distributor.",
+    "summary": "This is a website that simulates a sell and buy of a distributor, in this case, Yakult distributor.",
     "howToUse": "First, pick a seller. Than the products. That its now you have a receipt of your purchased!",
-    "languages": "JavaScript, Css + Html"
+    "goal": "This was actualy a freelance that dont go foarwd"
+    "languages": "React Js, Css + Html"
   },
 
   "links": {
