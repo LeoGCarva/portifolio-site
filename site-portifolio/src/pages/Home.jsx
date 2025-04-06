@@ -31,6 +31,7 @@ import { useState } from "react";
 
 import style from "./css/Home.module.css";
 import { ProjectYakult } from "./ProjectYakult";
+import { TermoClone } from "./TermoClone";
 
 export function Home() {
   const [pageCount, setPageCount] = useState();
@@ -117,6 +118,9 @@ export function Home() {
                 </label>
                 <div className={style.content} onClick={() => setPageCount(<ProjectYakult />)}>
                   <Project projectName={"project-yakult.json"} />
+                </div>
+                <div className={style.content} onClick={() => setPageCount(<TermoClone />)}>
+                  <Project projectName={"termo-clone.json"} />
                 </div>
               </div>
             </div>
